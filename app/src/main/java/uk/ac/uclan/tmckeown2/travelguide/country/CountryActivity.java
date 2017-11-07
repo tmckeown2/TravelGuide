@@ -18,8 +18,11 @@ public class CountryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home); //TODO: Fix the content view
+        setContentView(R.layout.activity_country);
         Log.d(TAG, "onCreate: Starting.");
+
+        setupNavigationView();
+        setupCountryInfo();
     }
 
     // Navigation Bar Setup
@@ -32,5 +35,15 @@ public class CountryActivity extends AppCompatActivity {
         Menu menu = view.getMenu();
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
+    }
+
+    // CountryInfo Setup
+    private void setupCountryInfo() {
+
+        /*
+        Intent intent = new Intent(getBaseContext(), CountryInfoActivity.class);
+        intent.putExtra("EXTRA_ACTIVITY_NUM", ACTIVITY_NUM);
+        intent.putExtra("EXTRA_COUNTRY_NAME", "NAME"); //TODO: Change "NAME" to country ID attached to card for SQL query in CountryInfo
+         */
     }
 }

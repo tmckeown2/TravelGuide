@@ -18,7 +18,9 @@
         </activity>
 
         <activity android:name=".country.CountryActivity"/>
+        <activity android:name=".country.CountryInfoActivity"/>
         <activity android:name=".city.CityActivity"/>
+        <activity android:name=".city.CityInfoActivity"/>
         <activity android:name=".favourites.FavouritesActivity"/>
         <activity android:name=".settings.SettingsActivity"/>
 

@@ -18,8 +18,10 @@ public class FavouritesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home); //TODO: Fix the content view
+        setContentView(R.layout.activity_favourites);
         Log.d(TAG, "onCreate: Starting.");
+
+        setupNavigationView();
     }
 
     // Navigation Bar Setup

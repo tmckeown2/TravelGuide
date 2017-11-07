@@ -20,6 +20,8 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Log.d(TAG, "onCreate: Starting.");
+
+        setupNavigationView();
     }
 
     // Navigation Bar Setup
