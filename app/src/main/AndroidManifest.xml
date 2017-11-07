@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".country.CountryActivity"/>
+        <activity android:name=".city.CityActivity"/>
+        <activity android:name=".favourites.FavouritesActivity"/>
+        <activity android:name=".settings.SettingsActivity"/>
+
     </application>
 
 </manifest>

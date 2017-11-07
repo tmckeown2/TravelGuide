@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/title_activity_home"/>
+
+    <item
+        android:id="@+id/ic_country"
+        android:icon="@drawable/ic_country"
+        android:title="@string/title_activity_country"/>
+
+    <item
+        android:id="@+id/ic_city"
+        android:icon="@drawable/ic_city"
+        android:title="@string/title_activity_city"/>
+
+    <item
+        android:id="@+id/ic_favourites"
+        android:icon="@drawable/ic_favourites"
+        android:title="@string/title_activity_favourite"/>
+
+    <item
+        android:id="@+id/ic_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/title_activity_settings"/>
+
+</menu>

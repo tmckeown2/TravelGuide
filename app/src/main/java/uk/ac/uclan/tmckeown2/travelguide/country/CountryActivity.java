@@ -1,7 +1,7 @@
-package uk.ac.uclan.tmckeown2.travelguide.home;
+package uk.ac.uclan.tmckeown2.travelguide.country;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,14 +11,14 @@ import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import uk.ac.uclan.tmckeown2.travelguide.R;
 import uk.ac.uclan.tmckeown2.travelguide.utils.NavigationViewHelper;
 
-public class HomeActivity extends AppCompatActivity {
-    private static final String TAG = "HomeActivity";
-    private static final int ACTIVITY_NUM = 0;
+public class CountryActivity extends AppCompatActivity {
+    private static final String TAG = "CountryActivity";
+    private static final int ACTIVITY_NUM = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_home); //TODO: Fix the content view
         Log.d(TAG, "onCreate: Starting.");
     }
 
