@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/relToolbar">
 
-            <include layout="@layout/layout_info_bar"/>
+            <include layout="@layout/layout_indepth_info_bar"/>
 
         </RelativeLayout>
 
@@ -28,6 +28,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true">
+
 
         </RelativeLayout>
 

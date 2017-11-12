@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
@@ -24,11 +25,11 @@ public class CityInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_city_info);
         Log.d(TAG, "onCreate: Started.");
 
-        ACTIVITY_NUM = getIntent().getIntExtra("EXTRA_ACTIVITY_NUM", 2);
-        mCityName = getIntent().getStringExtra("EXTRA_CITY_NAME");
+        ACTIVITY_NUM = 2;
+        mCityName = getIntent().getStringExtra("EXTRA_NAME");
 
-        setupToolbar();
         setupNavigationView();
+        setupInfoScreen();
     }
 
     // BottomNavigationView setup
@@ -43,9 +44,14 @@ public class CityInfoActivity extends AppCompatActivity {
         menuItem.setChecked(true);
     }
 
-    // Toolbar setup
-    private void setupToolbar() {
-        //Toolbar toolbar = (Toolbar)findViewById(R.id.infoToolBar);
-        //setSupportActionBar(toolbar);
+    // Load data from database into the the view
+    private void setupInfoScreen() {
+        Log.d(TAG, "setupInfoScreen: Setting up City Information for: " + mCityName);
+
+        // Change the info bar to display the name of the city
+        TextView text = (TextView) findViewById(R.id.infoName);
+        text.setText(mCityName);
+
+
     }
 }

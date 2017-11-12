@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Travel Guide</string>
 
-    <string name="title_activity_home"     >Home    </string>
-    <string name="title_activity_country"  >Country </string>
-    <string name="title_activity_city"     >City    </string>
-    <string name="title_activity_favourite">Country </string>
-    <string name="title_activity_settings" >Settings</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_country">Country</string>
+    <string name="title_activity_city">City</string>
+    <string name="title_activity_favourite">Favourites</string>
+    <string name="title_activity_settings">Settings</string>
 </resources>

@@ -3,10 +3,12 @@ package uk.ac.uclan.tmckeown2.travelguide.country;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
@@ -25,11 +27,11 @@ public class CountryInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_country_info);
         Log.d(TAG, "onCreate: Started.");
 
-        ACTIVITY_NUM = getIntent().getIntExtra("EXTRA_ACTIVITY_NUM", 1);
-        mCountryName = getIntent().getStringExtra("EXTRA_COUNTRY_NAME");
+        ACTIVITY_NUM = 1;
+        mCountryName = getIntent().getStringExtra("EXTRA_NAME");
 
-        setupToolbar();
         setupNavigationView();
+        setupInfoScreen();
     }
 
     // NavigationView Setup
@@ -44,9 +46,34 @@ public class CountryInfoActivity extends AppCompatActivity {
         menuItem.setChecked(true);
     }
 
-    // Toolbar Setup
-    private void setupToolbar() {
-        //Toolbar toolbar = (Toolbar)findViewById(R.id.infoToolBar);
-        //setSupportActionBar(toolbar);
+    // Load data from database into the the view
+    private void setupInfoScreen() {
+        Log.d(TAG, "setupInfoScreen: Setting up Country Information for: " + mCountryName);
+
+        // Change the info bar to display the name of the country and favourite state
+        TextView text = (TextView) findViewById(R.id.infoName);
+        text.setText(mCountryName);
+
+        // Setup the OnClickListener for updating favourite info
+        ImageButton fav = (ImageButton) findViewById(R.id.btnFavourite);
+        fav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view.getTag() == R.drawable.ic_fav_outline) {
+                    ((ImageButton)view).setImageResource(R.drawable.ic_fav_filled);
+                    view.setTag(R.drawable.ic_fav_filled);
+
+                    // Update the fav info in database
+                }
+                else {
+                    ((ImageButton)view).setImageResource(R.drawable.ic_fav_outline);
+                    view.setTag(R.drawable.ic_fav_outline);
+
+                    // Update the fav info in database
+                }
+            }
+        });
+
     }
+
 }

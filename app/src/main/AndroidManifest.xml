@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="uk.ac.uclan.tmckeown2.travelguide">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".home.HomeActivity">
+        <activity android:name=".home.HomeActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,12 +21,21 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".country.CountryActivity"/>
-        <activity android:name=".country.CountryInfoActivity"/>
-        <activity android:name=".city.CityActivity"/>
-        <activity android:name=".city.CityInfoActivity"/>
-        <activity android:name=".favourites.FavouritesActivity"/>
-        <activity android:name=".settings.SettingsActivity"/>
+        <activity android:name=".country.CountryActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".country.CountryInfoActivity"
+            />
+
+        <activity android:name=".city.CityActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".city.CityInfoActivity"
+            />
+
+        <activity android:name=".favourites.FavouritesActivity"
+            android:launchMode="singleTask"/>
+
+        <activity android:name=".settings.SettingsActivity"
+            android:launchMode="singleTask"/>
 
     </application>
 
